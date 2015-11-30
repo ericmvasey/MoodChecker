@@ -2,6 +2,7 @@
           package="com.apotheosis.moodchecker">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application android:allowBackup="true"
                  android:label="@string/app_name"
@@ -16,6 +17,14 @@
         </activity>
 
         <receiver android:name=".MoodNotifyReceiver" />
+
+        <receiver android:name=".MoodBootCompleteReceiver"
+                  android:enabled="true"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
     </application>
 

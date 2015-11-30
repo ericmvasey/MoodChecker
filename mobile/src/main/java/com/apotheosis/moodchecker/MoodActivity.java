@@ -12,7 +12,6 @@ import android.widget.Button;
 
 import java.util.Calendar;
 
-
 public class MoodActivity extends FragmentActivity
 {
     @Override
