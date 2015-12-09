@@ -27,12 +27,12 @@ public class MoodActivity extends FragmentActivity
             AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             Calendar c = Calendar.getInstance();
             c.setTimeInMillis(System.currentTimeMillis());
-            c.set(Calendar.HOUR_OF_DAY, 10);
+            c.set(Calendar.HOUR_OF_DAY, 11);
 
             Intent i = new Intent(MoodActivity.this, MoodNotifyReceiver.class);
             PendingIntent alarmIntent = PendingIntent.getBroadcast(this, 0, i, 0);
 
-            am.setInexactRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), AlarmManager.INTERVAL_HALF_DAY,
+            am.setRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), AlarmManager.INTERVAL_HALF_DAY,
                     alarmIntent);
 
             SharedPreferences.Editor editor = sp.edit();
