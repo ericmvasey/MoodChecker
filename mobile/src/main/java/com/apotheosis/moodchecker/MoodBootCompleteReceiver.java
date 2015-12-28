@@ -19,7 +19,7 @@ public class MoodBootCompleteReceiver extends BroadcastReceiver
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Calendar c = Calendar.getInstance();
         c.setTimeInMillis(System.currentTimeMillis());
-        c.set(Calendar.HOUR_OF_DAY, 11);
+        c.set(Calendar.HOUR_OF_DAY, 10);
 
         Intent i = new Intent(context, MoodNotifyReceiver.class);
         PendingIntent alarmIntent = PendingIntent.getBroadcast(context, 0, i, 0);

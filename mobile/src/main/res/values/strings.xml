@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Mood Checker</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string-array name="emotions">
+        <item>Happiness</item>
+        <item>Sadness</item>
+        <item>Fear</item>
+        <item>Anger</item>
+    </string-array>
 </resources>
